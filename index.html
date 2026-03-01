@@ -78,6 +78,7 @@
             height: 38px; width: 38px; border-radius: 8px;
             object-fit: cover; box-shadow: 0 0 10px var(--primary-glow);
             border: 1px solid var(--primary);
+            background: #111; /* Fallback color */
         }
         .topbar-brand span { color: var(--primary); text-shadow: 0 0 15px var(--primary-glow); }
         
@@ -129,7 +130,7 @@
         .btn-play:active { transform: scale(0.95); box-shadow: 0 4px 10px var(--primary-glow); }
 
         /* =========================================
-           STATS ROW
+           STATS ROW (RS UPDATED)
            ========================================= */
         .stats-scroll {
             display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory;
@@ -161,7 +162,7 @@
         .app-icon {
             width: 70px; height: 70px; border-radius: 14px; background: transparent;
             border: 1px solid var(--primary); display: flex; justify-content: center; align-items: center;
-            box-shadow: 0 0 15px var(--primary-glow); overflow: hidden;
+            box-shadow: 0 0 15px var(--primary-glow); overflow: hidden; background: #111;
         }
         .app-icon img { width: 100%; height: 100%; object-fit: cover; }
         .app-info h3 { font-size: 1.15rem; margin-bottom: 4px; color: #fff; }
@@ -215,10 +216,11 @@
 </head>
 <body>
 
-    <!-- 1. TOP APP BAR -->
+    <!-- 1. TOP APP BAR (LOGO FIX APPLIED) -->
     <div class="app-topbar">
         <div class="topbar-brand">
-            <img src="https://image2url.com/r2/default/images/1772369551811-ebe98952-0265-462a-9a03-cd6d3141090f.png" alt="Logo">
+            <!-- Added referrerpolicy to ensure the logo loads correctly from the external server -->
+            <img src="https://image2url.com/r2/default/images/1772369551811-ebe98952-0265-462a-9a03-cd6d3141090f.png" alt="Logo" referrerpolicy="no-referrer">
             SS<span>ARENA</span>
         </div>
         <div class="topbar-actions">
@@ -241,14 +243,15 @@
         </div>
     </div>
 
-    <!-- 3. STATS ROW -->
+    <!-- 3. STATS ROW (RS FIX APPLIED) -->
     <div class="stats-scroll">
         <div class="stat-box">
             <div class="stat-value">50K+</div>
             <div class="stat-name">Players</div>
         </div>
         <div class="stat-box">
-            <div class="stat-value" style="color: var(--primary); text-shadow: 0 0 10px var(--primary-glow);">₹5M+</div>
+            <!-- Changed ₹ to RS here -->
+            <div class="stat-value" style="color: var(--primary); text-shadow: 0 0 10px var(--primary-glow);">RS 5M+</div>
             <div class="stat-name">Prizes Won</div>
         </div>
         <div class="stat-box">
@@ -261,7 +264,7 @@
         </div>
     </div>
 
-    <!-- 4. DOWNLOAD APP CARD -->
+    <!-- 4. DOWNLOAD APP CARD (LOGO FIX APPLIED) -->
     <div class="section-wrapper" id="download-section">
         <div class="section-header">
             <h2 class="section-title gaming-font">Download App</h2>
@@ -271,7 +274,8 @@
         <div class="download-box">
             <div class="dl-header">
                 <div class="app-icon">
-                    <img src="https://image2url.com/r2/default/images/1772369551811-ebe98952-0265-462a-9a03-cd6d3141090f.png" alt="App Icon">
+                    <!-- Added referrerpolicy here as well -->
+                    <img src="https://image2url.com/r2/default/images/1772369551811-ebe98952-0265-462a-9a03-cd6d3141090f.png" alt="App Icon" referrerpolicy="no-referrer">
                 </div>
                 <div class="app-info">
                     <h3 class="gaming-font">SS ARENA OFFICIAL</h3>
@@ -343,7 +347,7 @@
     </div>
 
 <!-- END OF PART 1 -->
-  <!-- =========================================
+    <!-- =========================================
          PART 2 CSS (Appended)
          ========================================= -->
     <style>
@@ -453,7 +457,7 @@
 
     </style>
 
-    <!-- 6. APP SCREENSHOTS SECTION (WITH REAL SCREENSHOTS) -->
+    <!-- 6. APP SCREENSHOTS SECTION (REFERRERPOLICY FIX APPLIED) -->
     <div class="section-wrapper" id="screenshots-section">
         <div class="section-header">
             <h2 class="section-title gaming-font">Interface</h2>
@@ -461,16 +465,16 @@
         </div>
         <div class="screenshot-scroll">
             <div class="screenshot-card" onclick="openModal('https://image2url.com/r2/default/images/1772369790216-e0ef01a6-ae16-48ea-b718-ca4713254405.jpg')">
-                <img src="https://image2url.com/r2/default/images/1772369790216-e0ef01a6-ae16-48ea-b718-ca4713254405.jpg" alt="Dashboard Screenshot">
+                <img src="https://image2url.com/r2/default/images/1772369790216-e0ef01a6-ae16-48ea-b718-ca4713254405.jpg" alt="Dashboard Screenshot" referrerpolicy="no-referrer">
             </div>
             <div class="screenshot-card" onclick="openModal('https://image2url.com/r2/default/images/1772369903634-5293f2ad-e654-453a-baea-789fa5c81912.jpg')">
-                <img src="https://image2url.com/r2/default/images/1772369903634-5293f2ad-e654-453a-baea-789fa5c81912.jpg" alt="Matches Screenshot">
+                <img src="https://image2url.com/r2/default/images/1772369903634-5293f2ad-e654-453a-baea-789fa5c81912.jpg" alt="Matches Screenshot" referrerpolicy="no-referrer">
             </div>
             <div class="screenshot-card" onclick="openModal('https://image2url.com/r2/default/images/1772369937250-2ff7956c-b20d-4546-bf11-97662f45ce73.jpg')">
-                <img src="https://image2url.com/r2/default/images/1772369937250-2ff7956c-b20d-4546-bf11-97662f45ce73.jpg" alt="Wallet Screenshot">
+                <img src="https://image2url.com/r2/default/images/1772369937250-2ff7956c-b20d-4546-bf11-97662f45ce73.jpg" alt="Wallet Screenshot" referrerpolicy="no-referrer">
             </div>
             <div class="screenshot-card" onclick="openModal('https://image2url.com/r2/default/images/1772369964892-62e1a98c-0255-4a35-b087-a93bd9fa1c02.jpg')">
-                <img src="https://image2url.com/r2/default/images/1772369964892-62e1a98c-0255-4a35-b087-a93bd9fa1c02.jpg" alt="Profile Screenshot">
+                <img src="https://image2url.com/r2/default/images/1772369964892-62e1a98c-0255-4a35-b087-a93bd9fa1c02.jpg" alt="Profile Screenshot" referrerpolicy="no-referrer">
             </div>
         </div>
     </div>
@@ -478,7 +482,7 @@
     <!-- FULL SCREEN IMAGE PREVIEW MODAL -->
     <div id="img-modal">
         <span class="close-modal" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modal-img">
+        <img class="modal-content" id="modal-img" referrerpolicy="no-referrer">
     </div>
 
     <!-- 7. TESTIMONIALS SECTION -->
@@ -511,7 +515,7 @@
         </div>
     </div>
 
-    <!-- 8. FAQ SECTION -->
+    <!-- 8. FAQ SECTION (RS FIX APPLIED) -->
     <div class="section-wrapper">
         <div class="section-header">
             <h2 class="section-title gaming-font">Support & FAQ</h2>
@@ -523,7 +527,8 @@
             </div>
             <div class="faq-item">
                 <div class="faq-header">What is the minimum withdrawal? <i class="fas fa-chevron-down"></i></div>
-                <div class="faq-body">The minimum withdrawal amount is just ₹50. You can withdraw directly to your UPI ID, Paytm Wallet, or Bank Account instantly.</div>
+                <!-- Changed ₹50 to RS 50 here -->
+                <div class="faq-body">The minimum withdrawal amount is just RS 50. You can withdraw directly to your UPI ID, Paytm Wallet, or Bank Account instantly.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-header">Are emulators allowed? <i class="fas fa-chevron-down"></i></div>
@@ -668,3 +673,4 @@
     </script>
 </body>
 </html>
+    
